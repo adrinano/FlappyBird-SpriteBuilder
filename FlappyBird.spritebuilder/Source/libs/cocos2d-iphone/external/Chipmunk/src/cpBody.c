@@ -110,18 +110,18 @@ cpBodyFree(cpBody *body)
 	static void
 	cpBodySanityCheck(const cpBody *body)
 	{
-		cpAssertHard(body->m == body->m && body->m_inv == body->m_inv, "Body's mass is NaN.");
-		cpAssertHard(body->i == body->i && body->i_inv == body->i_inv, "Body's moment is NaN.");
-		cpAssertHard(body->m >= 0.0f, "Body's mass is negative.");
-		cpAssertHard(body->i >= 0.0f, "Body's moment is negative.");
-		
+//		cpAssertHard(body->m == body->m && body->m_inv == body->m_inv, "Body's mass is NaN.");
+//		cpAssertHard(body->i == body->i && body->i_inv == body->i_inv, "Body's moment is NaN.");
+//		cpAssertHard(body->m >= 0.0f, "Body's mass is negative.");
+//		cpAssertHard(body->i >= 0.0f, "Body's moment is negative.");
+//		
 		cpv_assert_sane(body->p, "Body's position is invalid.");
-		cpv_assert_sane(body->v, "Body's velocity is invalid.");
-		cpv_assert_sane(body->f, "Body's force is invalid.");
-
-		cpAssertHard(body->a == body->a && cpfabs(body->a) != INFINITY, "Body's angle is invalid.");
-		cpAssertHard(body->w == body->w && cpfabs(body->w) != INFINITY, "Body's angular velocity is invalid.");
-		cpAssertHard(body->t == body->t && cpfabs(body->t) != INFINITY, "Body's torque is invalid.");
+//		cpv_assert_sane(body->v, "Body's velocity is invalid.");
+//		cpv_assert_sane(body->f, "Body's force is invalid.");
+//
+//		cpAssertHard(body->a == body->a && cpfabs(body->a) != INFINITY, "Body's angle is invalid.");
+//		cpAssertHard(body->w == body->w && cpfabs(body->w) != INFINITY, "Body's angular velocity is invalid.");
+//		cpAssertHard(body->t == body->t && cpfabs(body->t) != INFINITY, "Body's torque is invalid.");
 	}
 	
 	#define	cpAssertSaneBody(body) cpBodySanityCheck(body)
