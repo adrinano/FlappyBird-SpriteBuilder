@@ -10,7 +10,7 @@
 #import "Character.h"
 
 Character* character;
-CCPhysicsNode* physicNode;
+CCPhysicsNode* physicsNode;
 
 
 typedef NS_ENUM(NSInteger, DrawingOrder) {
