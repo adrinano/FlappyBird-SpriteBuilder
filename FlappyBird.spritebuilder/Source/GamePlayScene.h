@@ -9,6 +9,10 @@
 #import "CCNode.h"
 #import "Character.h"
 
+Character* character;
+CCPhysicsNode* physNode;
+
+
 typedef NS_ENUM(NSInteger, DrawingOrder) {
     DrawingOrderPipes,
     DrawingOrderGround,
