@@ -17,6 +17,16 @@
 -(void)update:(CCTime)delta
 {
     // put update code here
+    timeSinceObstacle += delta; // delta is approximately 1/60th of a second
+    
+    if (timeSinceObstacle > 2.0f)
+    {
+        // Add a new obstacle
+        [self addObstacle];
+        
+        // Then reset the timer.
+        timeSinceObstacle = 0.0f;
+    }
 }
 
 // put new methods here
